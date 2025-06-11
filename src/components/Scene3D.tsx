@@ -154,7 +154,7 @@ const Scene3DContent = () => {
       {/* Particle Field */}
       <ParticleField />
       
-      {/* 3D Text */}
+      {/* 3D Text - Remove font dependency */}
       <Float speed={1} rotationIntensity={0.2} floatIntensity={0.2}>
         <Text
           position={[0, 3, 0]}
@@ -162,7 +162,6 @@ const Scene3DContent = () => {
           color="#ffffff"
           anchorX="center"
           anchorY="middle"
-          font="/fonts/inter-bold.woff"
         >
           3D Experience
         </Text>
@@ -182,6 +181,7 @@ export const Scene3D = () => {
           powerPreference: "high-performance"
         }}
         camera={{ position: [0, 0, 10], fov: 60 }}
+        onCreated={() => console.log("3D Scene loaded successfully")}
       >
         <Scene3DContent />
       </Canvas>

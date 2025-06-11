@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -106,14 +105,6 @@ export const UI3D = () => {
             </div>
           </div>
         </Card>
-      </div>
-
-      {/* Loading Indicator */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-auto">
-        <div className="flex items-center gap-2 glass-effect px-4 py-2 rounded-full">
-          <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-          <span className="text-sm text-muted-foreground">Loading 3D Scene...</span>
-        </div>
       </div>
     </div>
   );
