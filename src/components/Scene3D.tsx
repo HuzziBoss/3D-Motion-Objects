@@ -21,7 +21,6 @@ const AnimatedSphere = ({ position, color, speed = 1 }: { position: [number, num
         <sphereGeometry args={[1, 64, 64]} />
         <MeshDistortMaterial
           color={color}
-          attach="material"
           distort={0.3}
           speed={2}
           roughness={0.2}
