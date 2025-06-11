@@ -1,4 +1,3 @@
-
 import { useRef, useMemo, useState } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, Environment, Float, Text, MeshDistortMaterial, Stars, Sparkles } from '@react-three/drei';
@@ -269,8 +268,7 @@ export const Scene3D = () => {
         gl={{ 
           antialias: true, 
           alpha: true,
-          powerPreference: "high-performance",
-          shadowMap: { enabled: true, type: THREE.PCFSoftShadowMap }
+          powerPreference: "high-performance"
         }}
         camera={{ position: [0, 0, 10], fov: 60 }}
         onCreated={() => console.log("Enhanced 3D Scene loaded successfully")}
@@ -280,3 +278,5 @@ export const Scene3D = () => {
     </div>
   );
 };
+
+export default Scene3D;
